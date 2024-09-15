@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retrieve Visitor Information</title>
+    <!-- Link to Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="retrieve.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Retrieve Visitor Information</h1>
+        <form id="retrieveForm" class="form">
+            <div class="form-group">
+                <label for="passcodeInput">Enter Passcode</label>
+                <input type="text" id="passcodeInput" name="passcodeInput" placeholder="Enter the passcode" required>
+            </div>
+            <button type="submit" class="btn">Retrieve Information</button>
+        </form>
+
+        <div id="visitorInfo" class="visitor-info hidden">
+            <h2>Visitor Details</h2>
+            <p><strong>Name:</strong> <span id="infoName"></span></p>
+            <p><strong>Visit Date:</strong> <span id="infoDate"></span></p>
+            <p><strong>Visit Time:</strong> <span id="infoTime"></span></p>
+            <p><strong>Purpose:</strong> <span id="infoPurpose"></span></p>
+            <p><strong>Vehicle:</strong> <span id="infoVehicle"></span></p>
+            <p><strong>Plate:</strong> <span id="infoPlate"></span></p>
+            <p><strong>Address:</strong> <span id="infoAddress"></span></p>
+            <p><strong>Things to Remember/Bring:</strong> <span id="infoReminders"></span></p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="retrieve.js"></script>
+</body>
+</html>
