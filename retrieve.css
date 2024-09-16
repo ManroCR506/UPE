@@ -1,3 +1,5 @@
+/* retrieve.css */
+
 /* Import the Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
@@ -5,12 +7,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f5f6fa; /* Light background for contrast */
     color: #333;
 }
 
 .container {
-    max-width: 500px;
+    max-width: 600px; /* Increased width for better layout */
     margin: 60px auto;
     padding: 0 20px;
 }
@@ -25,6 +27,10 @@ h1 {
 .form {
     display: flex;
     flex-direction: column;
+    background-color: #fff; /* White background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -74,19 +80,142 @@ input[type="text"]:focus {
 
 .visitor-info {
     margin-top: 40px;
+    background-color: #fff; /* White background for the info card */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .visitor-info h2 {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.visitor-info p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.visitor-info .info-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.visitor-info .info-item:last-child {
+    margin-bottom: 0;
+}
+
+.visitor-info .info-label {
+    flex: 0 0 40%;
+    font-weight: 500;
+    color: #555;
+}
+
+.visitor-info .info-value {
+    flex: 1;
+    color: #333;
 }
 
 .hidden {
     display: none;
+}
+
+/* Navigation Bar Styles */
+/* Copy the same navigation styles from your main CSS file */
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: 500;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007BFF;
+}
+
+/* Hamburger Menu Styles */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    /* Show the hamburger icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide the nav menu by default */
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    /* Show the nav menu when the checkbox is checked */
+    #menu-toggle:checked + .menu-icon + .nav-menu {
+        display: flex;
+    }
+
+    /* Adjust visitor info items for mobile */
+    .visitor-info .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .visitor-info .info-label {
+        margin-bottom: 5px;
+    }
 }
