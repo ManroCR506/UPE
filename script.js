@@ -1,3 +1,6 @@
+// Set alert off
+document.querySelector(".alert").style.display = "none";
+
 document.getElementById("visitorForm").addEventListener("submit", function(event) {
     event.preventDefault();
     
