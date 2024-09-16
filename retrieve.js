@@ -67,35 +67,13 @@ document.getElementById("retrieveForm").addEventListener("submit", function(even
     // Search the mock data for a matching passcode
     const visitorData = mockData.find(visitor => visitor.passcode === passcodeInput);
 
-// In case of an invalid passcode
-const errorMessage = document.getElementById("errorMessage");
+    const errorMessage = document.getElementById("errorMessage");
+    const visitorInfo = document.getElementById("visitorInfo");
 
-if (visitorData) {
-    // Hide error message if previously shown
-    errorMessage.classList.add('hidden');
-    // Display visitor info
-    // ...
-} else {
-    // Show error message
-    errorMessage.textContent = "Invalid passcode. Please try again.";
-    errorMessage.classList.remove('hidden');
-    // Hide visitor info if visible
-    document.getElementById("visitorInfo").classList.add("hidden");
-}
-
-    
-
-// Display the Address
-const addressElement = document.getElementById("infoAddress");
-const address = visitorData.address || 'N/A';
-
-if (address.startsWith('http://') || address.startsWith('https://')) {
-    addressElement.innerHTML = `<a href="${address}" target="_blank">View Location</a>`;
-} else {
-    addressElement.textContent = address;
-}
-    
     if (visitorData) {
+        // Hide error message if previously shown
+        errorMessage.classList.add('hidden');
+
         // Display the data
         document.getElementById("infoName").innerText = visitorData.name || '';
         document.getElementById("infoDate").innerText = visitorData.date || '';
@@ -103,12 +81,26 @@ if (address.startsWith('http://') || address.startsWith('https://')) {
         document.getElementById("infoPurpose").innerText = visitorData.purpose || '';
         document.getElementById("infoVehicle").innerText = visitorData.vehicle || 'N/A';
         document.getElementById("infoPlate").innerText = visitorData.plate || 'N/A';
-        document.getElementById("infoAddress").innerText = visitorData.address || 'N/A';
+
+        // Handle the Address (make clickable if it's a link)
+        const addressElement = document.getElementById("infoAddress");
+        const address = visitorData.address || 'N/A';
+
+        if (address.startsWith('http://') || address.startsWith('https://')) {
+            addressElement.innerHTML = `<a href="${address}" target="_blank">View Location</a>`;
+        } else {
+            addressElement.textContent = address;
+        }
+
         document.getElementById("infoReminders").innerText = visitorData.reminders || 'N/A';
 
-        document.getElementById("visitorInfo").classList.remove("hidden");
+        visitorInfo.classList.remove("hidden");
     } else {
-        alert("Invalid passcode. Please try again.");
+        // Show error message
+        errorMessage.textContent = "Invalid passcode. Please try again.";
+        errorMessage.classList.remove('hidden');
+        // Hide visitor info if visible
+        visitorInfo.classList.add("hidden");
     }
 });
 
