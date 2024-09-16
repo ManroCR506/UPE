@@ -19,18 +19,43 @@
             <button type="submit" class="btn">Retrieve Information</button>
         </form>
 
-        <div id="visitorInfo" class="visitor-info hidden">
-            <h2>Visitor Details</h2>
-            <p><strong>Name:</strong> <span id="infoName"></span></p>
-            <p><strong>Visit Date:</strong> <span id="infoDate"></span></p>
-            <p><strong>Visit Time:</strong> <span id="infoTime"></span></p>
-            <p><strong>Purpose:</strong> <span id="infoPurpose"></span></p>
-            <p><strong>Vehicle:</strong> <span id="infoVehicle"></span></p>
-            <p><strong>Plate:</strong> <span id="infoPlate"></span></p>
-            <p><strong>Address:</strong> <span id="infoAddress"></span></p>
-            <p><strong>Things to Remember/Bring:</strong> <span id="infoReminders"></span></p>
-        </div>
+       <!-- Updated Visitor Info Section -->
+<div id="visitorInfo" class="visitor-info hidden">
+    <h2>Visitor Details</h2>
+    <div class="info-item">
+        <div class="info-label">Name:</div>
+        <div class="info-value" id="infoName"></div>
     </div>
+    <div class="info-item">
+        <div class="info-label">Visit Date:</div>
+        <div class="info-value" id="infoDate"></div>
+    </div>
+    <div class="info-item">
+        <div class="info-label">Visit Time:</div>
+        <div class="info-value" id="infoTime"></div>
+    </div>
+    <div class="info-item">
+        <div class="info-label">Purpose:</div>
+        <div class="info-value" id="infoPurpose"></div>
+    </div>
+    <div class="info-item">
+        <div class="info-label">Vehicle:</div>
+        <div class="info-value" id="infoVehicle"></div>
+    </div>
+    <div class="info-item">
+        <div class="info-label">Plate:</div>
+        <div class="info-value" id="infoPlate"></div>
+    </div>
+    <div class="info-item">
+        <div class="info-label">Address:</div>
+        <div class="info-value" id="infoAddress"></div>
+    </div>
+    <div class="info-item">
+        <div class="info-label">Things to Remember/Bring:</div>
+        <div class="info-value" id="infoReminders"></div>
+    </div>
+</div>
+
 
     <!-- JavaScript -->
     <script src="retrieve.js"></script>
