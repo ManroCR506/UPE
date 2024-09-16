@@ -67,6 +67,24 @@ document.getElementById("retrieveForm").addEventListener("submit", function(even
     // Search the mock data for a matching passcode
     const visitorData = mockData.find(visitor => visitor.passcode === passcodeInput);
 
+// In case of an invalid passcode
+const errorMessage = document.getElementById("errorMessage");
+
+if (visitorData) {
+    // Hide error message if previously shown
+    errorMessage.classList.add('hidden');
+    // Display visitor info
+    // ...
+} else {
+    // Show error message
+    errorMessage.textContent = "Invalid passcode. Please try again.";
+    errorMessage.classList.remove('hidden');
+    // Hide visitor info if visible
+    document.getElementById("visitorInfo").classList.add("hidden");
+}
+
+    
+
 // Display the Address
 const addressElement = document.getElementById("infoAddress");
 const address = visitorData.address || 'N/A';
