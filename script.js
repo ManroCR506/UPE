@@ -66,3 +66,11 @@ document.querySelector(".alert").style.display = "none";
 //reset the form
 document.getElementById("visitorForm").reset();
 });
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('menu-toggle').checked = false;
+    });
+});
