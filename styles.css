@@ -7,12 +7,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f6fa; /* Light background for contrast */
+    background-color: #f9f9f9;
     color: #333;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 600px; /* Adjusted for better mobile experience */
     margin: 60px auto;
     padding: 0 20px;
 }
@@ -27,7 +27,7 @@ h1 {
 .form {
     display: flex;
     flex-direction: column;
-    background-color: #fff; /* White background for the form */
+    background-color: #fff; /* Added for better contrast */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -39,11 +39,13 @@ h1 {
 
 .form-row {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: space-between;
 }
 
 .form-row .form-group {
     flex: 0 0 48%;
+    margin-bottom: 20px;
 }
 
 label {
@@ -118,10 +120,6 @@ textarea {
 .passcode-display {
     text-align: center;
     margin-top: 40px;
-    background-color: #fff; /* White background for the passcode display */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .passcode-display h2 {
@@ -249,5 +247,14 @@ textarea {
     /* Show the nav menu when the checkbox is checked */
     #menu-toggle:checked + .menu-icon + .nav-menu {
         display: flex;
+    }
+
+    /* Adjust form-row on smaller screens */
+    .form-row .form-group {
+        flex: 0 0 100%;
+    }
+
+    .btn {
+        width: 100%;
     }
 }
