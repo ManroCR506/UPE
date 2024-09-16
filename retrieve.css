@@ -218,4 +218,13 @@ input[type="text"]:focus {
     .visitor-info .info-label {
         margin-bottom: 5px;
     }
+    
+    .error-message {
+    color: #D8000C;
+    background-color: #FFBABA;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
 }
