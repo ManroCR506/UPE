@@ -67,6 +67,16 @@ document.getElementById("retrieveForm").addEventListener("submit", function(even
     // Search the mock data for a matching passcode
     const visitorData = mockData.find(visitor => visitor.passcode === passcodeInput);
 
+// Display the Address
+const addressElement = document.getElementById("infoAddress");
+const address = visitorData.address || 'N/A';
+
+if (address.startsWith('http://') || address.startsWith('https://')) {
+    addressElement.innerHTML = `<a href="${address}" target="_blank">View Location</a>`;
+} else {
+    addressElement.textContent = address;
+}
+    
     if (visitorData) {
         // Display the data
         document.getElementById("infoName").innerText = visitorData.name || '';
