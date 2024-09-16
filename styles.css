@@ -159,4 +159,98 @@ textarea {
   text-align: center;
   font-size: 18px;
   font-weight: 900;
+    /* Existing CSS */
+/* ... existing styles ... */
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: 500;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007BFF;
+}
+
+/* Hamburger Menu Styles */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    /* Show the hamburger icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide the nav menu by default */
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    /* Show the nav menu when the checkbox is checked */
+    #menu-toggle:checked + .menu-icon + .nav-menu {
+        display: flex;
+    }
+}
+
 }
