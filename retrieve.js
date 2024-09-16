@@ -3,7 +3,7 @@
 // Mock JSON data
 const mockData = [
     {
-        "name": "Alice Johnson",
+        "name": "Valeria Alvarado",
         "date": "2024-09-15",
         "time": "10:30",
         "purpose": "Business Meeting",
@@ -14,7 +14,7 @@ const mockData = [
         "passcode": "123456"
     },
     {
-        "name": "Bob Smith",
+        "name": "Bob Sponge",
         "date": "2024-09-16",
         "time": "14:00",
         "purpose": "Project Collaboration",
@@ -25,7 +25,7 @@ const mockData = [
         "passcode": "654321"
     },
     {
-        "name": "Carol Williams",
+        "name": "Gaby Suarez",
         "date": "2024-09-17",
         "time": "09:00",
         "purpose": "Interview",
@@ -36,7 +36,7 @@ const mockData = [
         "passcode": "112233"
     },
     {
-        "name": "David Brown",
+        "name": "Manri Alvarado",
         "date": "2024-09-18",
         "time": "11:15",
         "purpose": "Site Inspection",
@@ -47,7 +47,7 @@ const mockData = [
         "passcode": "445566"
     },
     {
-        "name": "Emma Davis",
+        "name": "Raúl Alvarado",
         "date": "2024-09-19",
         "time": "13:45",
         "purpose": "Client Lunch",
