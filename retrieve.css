@@ -117,6 +117,16 @@ input[type="text"]:focus {
     display: none;
 }
 
+/* Error Message Styling */
+.error-message {
+    color: #D8000C;
+    background-color: #FFBABA;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
 /* Navigation Bar Styles */
 /* Copy the same navigation styles from your main CSS file */
 
@@ -218,13 +228,4 @@ input[type="text"]:focus {
     .visitor-info .info-label {
         margin-bottom: 5px;
     }
-    
-    .error-message {
-    color: #D8000C;
-    background-color: #FFBABA;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 4px;
-}
-
 }
