@@ -251,6 +251,15 @@ textarea {
     #menu-toggle:checked + .menu-icon + .nav-menu {
         display: flex;
     }
-}
+
+     /* Adjust visitor info items for mobile */
+    .visitor-info .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .visitor-info .info-label {
+        margin-bottom: 5px;
+    }
 
 }
