@@ -67,13 +67,9 @@ document.getElementById("retrieveForm").addEventListener("submit", function(even
     // Search the mock data for a matching passcode
     const visitorData = mockData.find(visitor => visitor.passcode === passcodeInput);
 
-    const errorMessage = document.getElementById("errorMessage");
     const visitorInfo = document.getElementById("visitorInfo");
 
     if (visitorData) {
-        // Hide error message if previously shown
-        errorMessage.classList.add('hidden');
-
         // Display the data
         document.getElementById("infoName").innerText = visitorData.name || '';
         document.getElementById("infoDate").innerText = visitorData.date || '';
@@ -96,9 +92,8 @@ document.getElementById("retrieveForm").addEventListener("submit", function(even
 
         visitorInfo.classList.remove("hidden");
     } else {
-        // Show error message
-        errorMessage.textContent = "Invalid passcode. Please try again.";
-        errorMessage.classList.remove('hidden');
+        // Use alert for error handling
+        alert("Invalid passcode. Please try again.");
         // Hide visitor info if visible
         visitorInfo.classList.add("hidden");
     }
