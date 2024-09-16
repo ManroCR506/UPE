@@ -7,8 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- CSS link -->
     <link rel="stylesheet" href="retrieve.css">
+    <!-- Font Awesome for icons (if using the hamburger menu) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-z7hBTDtOx1fKiYk9s4HvFnkTbIp2cmFvs7kIw6l9v0+DeQtv2uZfY6QWX35bY5pKwEeE4Y1hqLfcofDxMkh/1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">VisitorApp</a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="retrieve.html" class="nav-link">Retrieve Information</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <h1>Retrieve Visitor Information</h1>
         <form id="retrieveForm" class="form">
@@ -19,45 +34,46 @@
             <button type="submit" class="btn">Retrieve Information</button>
         </form>
 
-       <!-- Updated Visitor Info Section -->
-<div id="visitorInfo" class="visitor-info hidden">
-    <h2>Visitor Details</h2>
-    <div class="info-item">
-        <div class="info-label">Name:</div>
-        <div class="info-value" id="infoName"></div>
-    </div>
-    <div class="info-item">
-        <div class="info-label">Visit Date:</div>
-        <div class="info-value" id="infoDate"></div>
-    </div>
-    <div class="info-item">
-        <div class="info-label">Visit Time:</div>
-        <div class="info-value" id="infoTime"></div>
-    </div>
-    <div class="info-item">
-        <div class="info-label">Purpose:</div>
-        <div class="info-value" id="infoPurpose"></div>
-    </div>
-    <div class="info-item">
-        <div class="info-label">Vehicle:</div>
-        <div class="info-value" id="infoVehicle"></div>
-    </div>
-    <div class="info-item">
-        <div class="info-label">Plate:</div>
-        <div class="info-value" id="infoPlate"></div>
-    </div>
-    <div class="info-item">
-        <div class="info-label">Address:</div>
-        <div class="info-value" id="infoAddress"></div>
-    </div>
-    <div class="info-item">
-        <div class="info-label">Things to Remember/Bring:</div>
-        <div class="info-value" id="infoReminders"></div>
-    </div>
-</div>
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message hidden"></div>
 
-<!-- Add an element for error messages -->
-<div id="errorMessage" class="error-message hidden"></div>
+        <!-- Updated Visitor Info Section -->
+        <div id="visitorInfo" class="visitor-info hidden">
+            <h2>Visitor Details</h2>
+            <div class="info-item">
+                <div class="info-label">Name:</div>
+                <div class="info-value" id="infoName"></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Visit Date:</div>
+                <div class="info-value" id="infoDate"></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Visit Time:</div>
+                <div class="info-value" id="infoTime"></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Purpose:</div>
+                <div class="info-value" id="infoPurpose"></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Vehicle:</div>
+                <div class="info-value" id="infoVehicle"></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Plate:</div>
+                <div class="info-value" id="infoPlate"></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Address:</div>
+                <div class="info-value" id="infoAddress"></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Things to Remember/Bring:</div>
+                <div class="info-value" id="infoReminders"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="retrieve.js"></script>
