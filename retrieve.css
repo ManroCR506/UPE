@@ -227,3 +227,27 @@ input[type="text"]:focus {
     border-radius: 4px;
     text-align: center;
 }
+/* Button Group for Approve and Cancel */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-approve {
+    background-color: #28a745; /* Green for Approve */
+    color: #fff;
+}
+
+.btn-approve:hover {
+    background-color: #218838;
+}
+
+.btn-cancel {
+    background-color: #dc3545; /* Red for Cancel */
+    color: #fff;
+}
+
+.btn-cancel:hover {
+    background-color: #c82333;
+}
