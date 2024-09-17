@@ -251,3 +251,17 @@ input[type="text"]:focus {
 .btn-cancel:hover {
     background-color: #c82333;
 }
+
+// Add event listeners for Approve and Cancel buttons
+document.querySelector('.btn-approve').addEventListener('click', function() {
+    alert("Visitor Approved");
+    // Additional approval logic can go here
+});
+
+document.querySelector('.btn-cancel').addEventListener('click', function() {
+    // Hide the visitor info section
+    document.getElementById('visitorInfo').classList.add('hidden');
+    // Reset the form if needed
+    document.getElementById('retrieveForm').reset();
+    alert("Visitor Information Canceled");
+});
