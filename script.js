@@ -51,4 +51,16 @@ document.getElementById("visitorForm").addEventListener("submit", function(event
     // Update WhatsApp link
     whatsappLink.href = `https://wa.me/?text=${encodedMessage}`;
     whatsappLink.innerText = "Share on WhatsApp";
+  
+  //enable alert (after the submit buttom)
+document.querySelector(".alert").style.display = "block";
+
+//remove alert after 3 seconds
+setTimeout(() => {
+document.querySelector(".alert").style.display = "none";
+}, 5000);
+
+
+//reset the form
+document.getElementById("visitorForm").reset();
 });
