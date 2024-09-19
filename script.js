@@ -1,12 +1,5 @@
-// Set alert off
-document.querySelector(".alert").style.display = "none";
 document.getElementById("visitorForm").addEventListener("submit", function(event) {
     event.preventDefault();
-
-    // Initialize Supabase client with your URL and Anon Key
-    //const supabaseUrl = 'https://obbfxpengnphcmjvycbf.supabase.co'; 
-    //const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9iYmZ4cGVuZ25waGNtanZ5Y2JmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY2OTk5NjMsImV4cCI6MjA0MjI3NTk2M30.nvyrjJw0AjjcIoVykuNPLbV65-RZ3pYEDB8EQDNaMZY';  // Replace with your Supabase Anon Key
-    //const supabase = supabase.createClient(supabaseUrl, supabaseKey);
     
     // Capture form data
     const name = document.getElementById("name").value.trim();
@@ -58,24 +51,4 @@ document.getElementById("visitorForm").addEventListener("submit", function(event
     // Update WhatsApp link
     whatsappLink.href = `https://wa.me/?text=${encodedMessage}`;
     whatsappLink.innerText = "Share on WhatsApp";
-  
-  //enable alert (after the submit buttom)
-document.querySelector(".alert").style.display = "block";
-
-//remove alert after 3 seconds
-setTimeout(() => {
-document.querySelector(".alert").style.display = "none";
-}, 5000);
-
-
-//reset the form
-document.getElementById("visitorForm").reset();
-});
-
-const navLinks = document.querySelectorAll('.nav-link');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.getElementById('menu-toggle').checked = false;
-    });
 });
