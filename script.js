@@ -2,25 +2,62 @@
 document.querySelector(".alert").style.display = "none";
 document.getElementById("visitorForm").addEventListener("submit", function(event) {
     event.preventDefault();
+
+    // Initialize Supabase client with your URL and Anon Key
+    const supabaseUrl = 'https://obbfxpengnphcmjvycbf.supabase.co'; 
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9iYmZ4cGVuZ25waGNtanZ5Y2JmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY2OTk5NjMsImV4cCI6MjA0MjI3NTk2M30.nvyrjJw0AjjcIoVykuNPLbV65-RZ3pYEDB8EQDNaMZY';  // Replace with your Supabase Anon Key
+    const supabase = supabase.createClient(supabaseUrl, supabaseKey);
     
     // Capture form data
-    const name = document.getElementById("name").value.trim();
-    const date = document.getElementById("date").value;
-    const time = document.getElementById("time").value;
-    const purpose = document.getElementById("purpose").value.trim();
+    const Nombre_Visita = document.getElementById("name").value.trim();
+    const ID_Visita = document.getElementById("ID").value.trim();
+    const Fecha_Visita = document.getElementById("date").value;
+    const Hora_Visita = document.getElementById("time").value;
+    const Motivo_Visita = document.getElementById("purpose").value.trim();
 
     // Capture vehicle and plate information
-    const vehicle = document.getElementById("vehicle").value.trim();
-    const plate = document.getElementById("plate").value.trim();
+    const Vehiculo_MarcaModelo = document.getElementById("vehicle").value.trim();
+    const Vehiculo_Placa = document.getElementById("plate").value.trim();
 
     // Capture the Address field
-    const address = document.getElementById("address").value.trim();
+    const Direccion = document.getElementById("address").value.trim();
 
     // Capture things to remember/bring
-    const reminders = document.getElementById("reminders").value.trim();
+    const Recordatorio_Visita = document.getElementById("reminders").value.trim();
+    // Capture Status
+    const Status = 'Autorizado'
+    
+    // Capture ID Usuario
+    const ID_Usuario = 'd4d25141-8008-40ed-8be4-452c8e3c2df1'
 
     // Generate passcode
-    const passcode = Math.floor(100000 + Math.random() * 900000).toString();
+    const Passcode = Math.floor(100000 + Math.random() * 900000).toString();
+
+     // Insert data into Supabase
+    try {
+        const { data, error } = await supabase
+            .from('Autorizaciones')
+            .insert([
+                {
+                    Nombre_Visita,
+                    ID_Visita,
+                    Motivo_Visita,
+                    Fecha_Visita,
+                    Hora_Visita,
+                    Vehiculo_MarcaModelo,
+                    Vehiculo_Placa,
+                    Direccion,
+                    Recordatorio_Visita,
+                    Passcode,
+                    Status,
+                    ID_Usuario,
+                    
+                }
+            ]);
+
+        if (error) {
+            throw error;
+        }
 
     // Display the passcode
     document.getElementById("passcode").innerText = passcode;
@@ -53,6 +90,11 @@ document.getElementById("visitorForm").addEventListener("submit", function(event
     // Update WhatsApp link
     whatsappLink.href = `https://wa.me/?text=${encodedMessage}`;
     whatsappLink.innerText = "Share on WhatsApp";
+
+    } catch (error) {
+        console.error('Error inserting data:', error.message);
+        alert("Error saving data. Please try again.");
+    }
   
   //enable alert (after the submit buttom)
 document.querySelector(".alert").style.display = "block";
