@@ -4,9 +4,9 @@ document.getElementById("visitorForm").addEventListener("submit", function(event
     event.preventDefault();
 
     // Initialize Supabase client with your URL and Anon Key
-    const supabaseUrl = 'https://obbfxpengnphcmjvycbf.supabase.co'; 
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9iYmZ4cGVuZ25waGNtanZ5Y2JmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY2OTk5NjMsImV4cCI6MjA0MjI3NTk2M30.nvyrjJw0AjjcIoVykuNPLbV65-RZ3pYEDB8EQDNaMZY';  // Replace with your Supabase Anon Key
-    const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+    //const supabaseUrl = 'https://obbfxpengnphcmjvycbf.supabase.co'; 
+    //const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9iYmZ4cGVuZ25waGNtanZ5Y2JmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY2OTk5NjMsImV4cCI6MjA0MjI3NTk2M30.nvyrjJw0AjjcIoVykuNPLbV65-RZ3pYEDB8EQDNaMZY';  // Replace with your Supabase Anon Key
+    //const supabase = supabase.createClient(supabaseUrl, supabaseKey);
     
     // Capture form data
     const name = document.getElementById("name").value.trim();
