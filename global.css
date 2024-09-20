@@ -91,7 +91,7 @@ input:focus, textarea:focus {
 
 /* Navbar styling */
 .navbar {
-    background-color: #7f00ff; /* Purple tone */
+    background-color: #7f00ff; /* Purple tone for the navbar */
     padding: 15px;
 }
 
@@ -117,26 +117,24 @@ input:focus, textarea:focus {
 }
 
 .nav-link {
-    color: white;
+    color: #fff; /* White text for better contrast */
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: #ff79c6; /* Lighter purple tone */
+    color: #ff79c6; /* Light purple/pink tone on hover */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    .form {
+    .nav-container {
         flex-direction: column;
     }
 
-    .navbar {
+    .nav-menu {
         flex-direction: column;
+        gap: 10px;
     }
 }
