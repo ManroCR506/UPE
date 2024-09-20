@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Visitors</title>
+    <!-- Link to Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (if using the hamburger menu) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-z7hBTDtOx1fKiYk9s4HvFnkTbIp2cmFvs7kIw6l9v0+DeQtv2uZfY6QWX35bY5pKwEeE4Y1hqLfcofDxMkh/1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="visitors.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">VisitorApp</a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="retrieve.html" class="nav-link">Retrieve Information</a></li>
+                <li><a href="visitors.html" class="nav-link">All Visitors</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>All Visitors</h1>
+        <table id="visitorsTable" class="visitors-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Purpose</th>
+                    <th>Vehicle</th>
+                    <th>Plate</th>
+                    <th>Address</th>
+                    <th>Reminders</th>
+                    <th>Passcode</th>
+                </tr>
+            </thead>
+            <tbody id="visitorsList">
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="visitors.js"></script>
+</body>
+</html>
