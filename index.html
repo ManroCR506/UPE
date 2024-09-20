@@ -5,17 +5,13 @@
     <title>Visitor Approval Form</title>
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome for icons (for the hamburger menu) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-z7hBTDtOx1fKiYk9s4HvFnkTbIp2cmFvs7kIw6l9v0+DeQtv2uZfY6QWX35bY5pKwEeE4Y1hqLfcofDxMkh/1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS link -->
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- SUPABASE DB -->
-    <!--<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script> -->
-
 </head>
 <body>
-        <!-- Navigation Menu -->
+    <!-- Navigation Menu -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">VisitorApp</a>
@@ -24,10 +20,11 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="retrieve.html" class="nav-link">Retrieve Information</a></li>
+                <li><a href="visitors.html" class="nav-link">All Visitors</a></li> <!-- New menu item added -->
             </ul>
         </div>
     </nav>
-    
+
     <div class="container">
         <h1>Visitor Approval</h1>
         <form id="visitorForm" class="form">
@@ -41,8 +38,7 @@
                 <label for="ID">Visitor ID</label>
                 <input type="text" id="ID" name="ID" placeholder="Enter visitor's ID" required>
             </div>
-            
-          <!-- Visit Date and Time -->
+            <!-- Visit Date and Time -->
             <div class="form-row">
                 <div class="form-group">
                     <label for="date">Visit Date</label>
@@ -92,7 +88,6 @@
 
         <div id="passcodeDisplay" class="passcode-display hidden">
             <h2>Passcode: <span id="passcode"></span></h2>
-            <!-- Updated message -->
             <p>Share this passcode with your visitor as it will be requested by Security at the entrance.</p>
 
             <!-- Only the WhatsApp Share Button -->
