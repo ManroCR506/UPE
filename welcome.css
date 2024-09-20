@@ -1,0 +1,77 @@
+/* welcome.css */
+
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f0fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Welcome Container */
+.welcome-container {
+    text-align: center;
+    background: linear-gradient(135deg, #7f00ff 0%, #e100ff 100%);
+    padding: 80px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+/* Welcome Content */
+.welcome-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.welcome-content h1 .brand-name {
+    color: #ff79c6; /* Light pink-purple tone */
+}
+
+.welcome-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+    background-color: #9b51e0; /* Lighter purple */
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #d1bce3; /* Lighter purple-gray */
+    color: #333;
+}
+
+.btn:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #7f00ff; /* Darker purple on hover */
+}
+
+.btn-secondary:hover {
+    background-color: #b89ccf;
+}
