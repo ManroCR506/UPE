@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>All Visitors</title>
+    <title>All Visitors - UPE</title>
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons (if using the hamburger menu) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-z7hBTDtOx1fKiYk9s4HvFnkTbIp2cmFvs7kIw6l9v0+DeQtv2uZfY6QWX35bY5pKwEeE4Y1hqLfcofDxMkh/1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="visitors.css">
+    <!-- Global styles link -->
+    <link rel="stylesheet" href="global.css">
 </head>
 <body>
     <!-- Navigation Menu -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="nav-logo">VisitorApp</a>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <a href="welcome.html" class="nav-logo">UPE</a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="retrieve.html" class="nav-link">Retrieve Information</a></li>
@@ -26,7 +23,7 @@
 
     <div class="container">
         <h1>All Visitors</h1>
-        <table id="visitorsTable" class="visitors-table">
+        <table class="visitors-table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -47,7 +44,6 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="visitors.js"></script>
 </body>
 </html>
